@@ -4,4 +4,6 @@
   <url><loc>https://holapendi.com/instalar.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://holapendi.com/privacidad.html</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
   <url><loc>https://holapendi.com/terminos.html</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://holapendi.com/reembolso.html</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://holapendi.com/cookies.html</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
 </urlset>
