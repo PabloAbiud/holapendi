@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <title>Pendi — Avisos por WhatsApp para tintorerías y lavanderías</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Pendi avisa por WhatsApp a tus clientes cuando su pedido está listo, con recordatorios para que pasen a recogerlo. Para tintorerías, lavanderías, zapaterías y más.">
+<meta name="description" content="Controla los servicios de tu tintorería, lavandería o zapatería sin notas de papel y da seguimiento a tus clientes por WhatsApp. Desde $199 MXN al mes.">
 <link rel="icon" type="image/png" sizes="32x32" href="/2026-11-16-pendi-favicon-32.png">
 <link rel="icon" type="image/png" sizes="512x512" href="/2026-11-16-pendi-icon-512.png">
 <link rel="apple-touch-icon" sizes="180x180" href="/2026-11-16-pendi-apple-touch-icon.png">
@@ -13,13 +13,13 @@
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Pendi">
 <meta property="og:title" content="Pendi — Deja de guardar pedidos que nadie recoge">
-<meta property="og:description" content="Avisa a tus clientes por WhatsApp cuando su pedido está listo. Menos pedidos olvidados y tu local más despejado.">
+<meta property="og:description" content="Controla los servicios de tu tintorería, lavandería o zapatería sin notas de papel y da seguimiento a tus clientes por WhatsApp. Desde $199 MXN al mes.">
 <meta property="og:url" content="https://holapendi.com/">
 <meta property="og:image" content="https://holapendi.com/icon.png">
 <meta property="og:locale" content="es_MX">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Pendi — Deja de guardar pedidos que nadie recoge">
-<meta name="twitter:description" content="Avisa a tus clientes por WhatsApp cuando su pedido está listo.">
+<meta name="twitter:description" content="Controla los servicios de tu tintorería, lavandería o zapatería sin notas de papel y da seguimiento a tus clientes por WhatsApp. Desde $199 MXN al mes.">
 <meta name="twitter:image" content="https://holapendi.com/icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -307,11 +307,11 @@
     {
      "@type": "Offer",
      "name": "Esencial",
-     "price": 299,
+     "price": 199,
      "priceCurrency": "MXN",
      "priceSpecification": {
       "@type": "UnitPriceSpecification",
-      "price": 299,
+      "price": 199,
       "priceCurrency": "MXN",
       "unitText": "MES"
      },
@@ -361,6 +361,7 @@
       <a class="navlink" href="#como">Cómo funciona</a>
       <a class="navlink" href="#beneficios">Beneficios</a>
       <a class="navlink" href="#precios">Precios</a>
+      <a class="navlink" href="#preguntas">Preguntas</a>
       <div class="nav-cta">
         <a class="btn btn-ghost" href="/instalar.html">Entrar</a>
         <a class="btn btn-primary" href="https://app.holapendi.com/?modo=crear&amp;plan=negocio" data-plan="negocio">Contratar</a>
@@ -465,7 +466,7 @@
         <div class="plan">
           <div class="pname">Esencial</div>
           <div class="pdesc">Para un local que quiere dejar el papel.</div>
-          <div class="price"><span class="per">$</span><span class="amt" data-m="299" data-a="249">299</span><span class="per">/mes</span></div>
+          <div class="price"><span class="per">$</span><span class="amt" data-m="199" data-a="166">199</span><span class="per">/mes</span></div>
           <div class="billed" data-billed="esencial"></div>
           <ul>
             <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>1 sucursal · 2 usuarios</li>
@@ -528,7 +529,7 @@
   </section>
 
   <!-- FAQ -->
-  <section>
+  <section id="preguntas">
     <div class="wrap">
       <div class="sec-head"><span class="eyebrow">Dudas</span><h2>Preguntas frecuentes</h2></div>
       <div class="faq">
@@ -563,6 +564,7 @@
           <a href="#como">Cómo funciona</a>
           <a href="#beneficios">Beneficios</a>
           <a href="#precios">Precios</a>
+          <a href="#preguntas">Preguntas frecuentes</a>
         </div>
         <div class="foot-col">
           <h4>Contacto</h4>
@@ -594,7 +596,7 @@
     [].forEach.call(document.querySelectorAll(".plan .amt"), function (el) {
       el.textContent = c === "anual" ? el.dataset.a : el.dataset.m;
     });
-    var annualTotals = { esencial: "2,990", negocio: "5,490", cadena: "9,990" };
+    var annualTotals = { esencial: "1,990", negocio: "5,490", cadena: "9,990" };
     [].forEach.call(document.querySelectorAll("[data-billed]"), function (el) {
       el.textContent = c === "anual" ? ("Facturado $" + annualTotals[el.dataset.billed] + " al año") : "";
     });
