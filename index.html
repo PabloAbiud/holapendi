@@ -266,26 +266,6 @@
   .foot-col a:hover { color: var(--primary-ink); }
   .foot-bottom { margin-top: 30px; padding-top: 20px; border-top: 1px solid var(--line); font-size: 13px; color: var(--muted); display: flex; flex-wrap: wrap; gap: 8px 18px; justify-content: space-between; }
 
-  /* signup overlay */
-  .overlay { position: fixed; inset: 0; z-index: 60; background: rgba(23,18,15,.55); display: flex; align-items: flex-end; justify-content: center; padding: 0; }
-  .overlay[hidden] { display: none; }
-  @media (min-width: 560px) { .overlay { align-items: center; padding: 20px; } }
-  .sheet { background: var(--surface); width: 100%; max-width: 440px; border-radius: 22px 22px 0 0; padding: 24px; box-shadow: var(--shadow-lg); max-height: 92vh; overflow-y: auto; }
-  @media (min-width: 560px) { .sheet { border-radius: 22px; } }
-  .sheet-head { display: flex; align-items: flex-start; justify-content: space-between; gap: 12px; margin-bottom: 4px; }
-  .sheet h3 { font-size: 23px; }
-  .sheet .sub { color: var(--muted); font-size: 14.5px; margin-top: 4px; }
-  .x { background: none; border: 0; cursor: pointer; color: var(--muted); font-size: 26px; line-height: 1; padding: 0; flex: none; }
-  .field { margin-top: 15px; }
-  .field label { display: block; font-size: 13px; font-weight: 700; margin-bottom: 6px; }
-  .field input, .field select { width: 100%; font: inherit; color: var(--ink); padding: 12px; border: 1px solid var(--line); border-radius: 11px; background: var(--surface-2); }
-  .sheet .btn { width: 100%; margin-top: 20px; }
-  .sheet .fineprint { font-size: 12px; color: var(--muted); margin-top: 12px; text-align: center; line-height: 1.5; }
-  .success { text-align: center; padding: 14px 0 6px; }
-  .success .check { width: 64px; height: 64px; border-radius: 50%; background: var(--menta-soft); color: var(--menta); display: grid; place-items: center; margin: 0 auto 16px; }
-  .success .check svg { width: 32px; height: 32px; }
-  .success h3 { font-size: 23px; }
-  .success p { color: var(--muted); font-size: 15px; margin-top: 10px; }
 
   input:focus-visible, select:focus-visible, button:focus-visible, a:focus-visible, summary:focus-visible { outline: 2px solid var(--primary); outline-offset: 2px; }
 </style>
@@ -383,7 +363,7 @@
       <a class="navlink" href="#precios">Precios</a>
       <div class="nav-cta">
         <a class="btn btn-ghost" href="/instalar.html">Entrar</a>
-        <button class="btn btn-primary" data-signup="negocio">Contratar</button>
+        <a class="btn btn-primary" href="https://app.holapendi.com/?modo=crear&amp;plan=negocio" data-plan="negocio">Contratar</a>
       </div>
     </nav>
   </div>
@@ -398,7 +378,7 @@
         <h1>Deja de guardar pedidos que <span class="hl">nadie recoge</span>.</h1>
         <p class="lead">Pendi avisa a tus clientes por WhatsApp cuando su pedido está listo y les recuerda hasta que pasan por él. Menos pedidos olvidados y tu local más despejado.</p>
         <div class="hero-cta">
-          <button class="btn btn-primary" data-signup="negocio">Probar 14 días gratis</button>
+          <a class="btn btn-primary" href="https://app.holapendi.com/?modo=crear&amp;plan=negocio" data-plan="negocio">Probar 14 días gratis</a>
           <a class="btn btn-ghost" href="#como">Ver cómo funciona</a>
         </div>
         <p class="hero-note">Sin tarjeta para la prueba · Se usa desde el celular</p>
@@ -500,7 +480,7 @@
             </ul>
           </div></div>
           <button class="more-toggle" type="button" aria-expanded="false">Ver todo lo que incluye <span class="chev" aria-hidden="true">+</span></button>
-          <button class="btn btn-ghost" data-signup="esencial">Contratar</button>
+          <a class="btn btn-ghost" href="https://app.holapendi.com/?modo=crear&amp;plan=esencial" data-plan="esencial">Contratar</a>
         </div>
         <div class="plan pop">
           <span class="tag">Más popular</span>
@@ -521,7 +501,7 @@
             </ul>
           </div></div>
           <button class="more-toggle" type="button" aria-expanded="false">Ver todo lo que incluye <span class="chev" aria-hidden="true">+</span></button>
-          <button class="btn btn-primary" data-signup="negocio">Contratar</button>
+          <a class="btn btn-primary" href="https://app.holapendi.com/?modo=crear&amp;plan=negocio" data-plan="negocio">Contratar</a>
         </div>
         <div class="plan">
           <div class="pname">Cadena</div>
@@ -541,7 +521,7 @@
             </ul>
           </div></div>
           <button class="more-toggle" type="button" aria-expanded="false">Ver todo lo que incluye <span class="chev" aria-hidden="true">+</span></button>
-          <button class="btn btn-ghost" data-signup="cadena">Contratar</button>
+          <a class="btn btn-ghost" href="https://app.holapendi.com/?modo=crear&amp;plan=cadena" data-plan="cadena">Contratar</a>
         </div>
       </div>
     </div>
@@ -565,7 +545,7 @@
     <div class="wrap">
       <h2>Empieza hoy, gratis por 14 días</h2>
       <p>Pruébalo con tu negocio esta semana. Si no te quita pedidos olvidados de encima, no pagas nada.</p>
-      <button class="btn btn-primary" data-signup="negocio">Probar 14 días gratis</button>
+      <a class="btn btn-primary" href="https://app.holapendi.com/?modo=crear&amp;plan=negocio" data-plan="negocio">Probar 14 días gratis</a>
     </div>
   </section>
 </main>
@@ -599,58 +579,13 @@
   </div>
 </footer>
 
-<style>
-  /* Shared-element: la tarjeta del paquete se transforma en el formulario */
-  ::view-transition-group(plan-morph) { animation-duration: .36s; animation-timing-function: cubic-bezier(.2,.8,.2,1); }
-  ::view-transition-old(plan-morph) { animation-duration: .24s; animation-timing-function: ease; }
-  ::view-transition-new(plan-morph) { animation-duration: .36s; animation-timing-function: cubic-bezier(.2,.8,.2,1); }
-  ::view-transition-old(root), ::view-transition-new(root) { animation-duration: .26s; }
-  @media (prefers-reduced-motion: reduce) {
-    ::view-transition-group(*), ::view-transition-old(*), ::view-transition-new(*) { animation: none !important; }
-  }
-</style>
-
-<!-- SIGNUP OVERLAY -->
-<div class="overlay" id="overlay" hidden>
-  <div class="sheet" role="dialog" aria-modal="true" aria-labelledby="sheet-title">
-    <div id="sheet-form">
-      <div class="sheet-head">
-        <div>
-          <h3 id="sheet-title">Prueba Pendi gratis</h3>
-          <p class="sub" id="sheet-sub">14 días, sin tarjeta. Empieza en un minuto.</p>
-        </div>
-        <button class="x" id="close-x" aria-label="Cerrar">×</button>
-      </div>
-      <form id="form-signup">
-        <div class="field"><label for="s-nom">Nombre del negocio</label><input id="s-nom" type="text" placeholder="Tu negocio…" required></div>
-        <div class="field"><label for="s-giro">Giro del negocio</label><select id="s-giro"><option value="Tintorería">Tintorería</option><option value="Lavandería">Lavandería</option><option value="Planchaduría">Planchaduría</option><option value="Zapatería">Zapatería</option><option value="Sastrería">Sastrería</option><option value="Costurería">Costurería</option><option value="Otro">Otro</option></select></div>
-        <div class="field"><label for="s-resp">Responsable</label><input id="s-resp" type="text" placeholder="Quién administra la cuenta" required></div>
-        <div class="field"><label for="s-wa">WhatsApp</label><input id="s-wa" type="tel" inputmode="tel" placeholder="55 1234 5678" required></div>
-        <div class="field"><label for="s-mail">Correo</label><input id="s-mail" type="email" placeholder="tucorreo@ejemplo.com" required></div>
-        <div class="field"><label for="s-dir">Dirección de la sucursal</label><input id="s-dir" type="text" placeholder="Calle, número, colonia, ciudad" required></div>
-        <div class="field"><label for="s-paq">Plan</label><select id="s-paq"><option value="esencial">Esencial · $299/mes</option><option value="negocio">Negocio · $549/mes</option><option value="cadena">Cadena · $999/mes</option></select></div>
-        <button class="btn btn-primary" type="submit">Crear mi cuenta</button>
-        <p class="fineprint">Al continuar aceptas los <a href="/terminos.html">Términos</a> y el <a href="/privacidad.html">Aviso de privacidad</a>. El primer cobro es después de los 14 días de prueba.</p>
-      </form>
-    </div>
-    <div id="sheet-success" role="status" aria-live="polite" hidden>
-      <div class="success">
-        <div class="check" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></div>
-        <h3>¡Tu cuenta está lista!</h3>
-        <p id="success-msg">Te enviamos por WhatsApp el enlace para entrar a Pendi y empezar tu prueba. ¡Bienvenido!</p>
-        <button class="btn btn-primary" id="close-ok" style="margin-top:22px">Entendido</button>
-      </div>
-    </div>
-  </div>
-</div>
-
 <script>
 (function () {
   "use strict";
   var $ = function (s, r) { return (r || document).querySelector(s); };
-  var PLAN = { esencial: "Esencial", negocio: "Negocio", cadena: "Cadena" };
+  var APP = "https://app.holapendi.com/?modo=crear";
 
-  // Pricing toggle
+  // Precios: mensual / anual. Los botones de contratar llevan el plan y el ciclo a la app.
   var cycle = "mensual";
   function setCycle(c) {
     cycle = c;
@@ -663,62 +598,15 @@
     [].forEach.call(document.querySelectorAll("[data-billed]"), function (el) {
       el.textContent = c === "anual" ? ("Facturado $" + annualTotals[el.dataset.billed] + " al año") : "";
     });
+    [].forEach.call(document.querySelectorAll("a[data-plan]"), function (el) {
+      el.href = APP + "&plan=" + el.dataset.plan + (c === "anual" ? "&ciclo=anual" : "");
+    });
   }
   setCycle("mensual");
 
-  // Overlay
-  var overlay = $("#overlay");
-  var sheetEl = $(".sheet");
-  var lastSource = null;
-  function canMorph() {
-    return !!document.startViewTransition &&
-      !(window.matchMedia && matchMedia("(prefers-reduced-motion: reduce)").matches);
-  }
-  function openWithTransition(src, plan) {
-    lastSource = src || null;
-    if (!canMorph() || !lastSource) { openSignup(plan); return; }
-    lastSource.style.viewTransitionName = "plan-morph";
-    var vt = document.startViewTransition(function () {
-      lastSource.style.viewTransitionName = "";
-      sheetEl.style.viewTransitionName = "plan-morph";
-      openSignup(plan);
-    });
-    vt.finished.then(cleanup, cleanup);
-    function cleanup() { sheetEl.style.viewTransitionName = ""; }
-  }
-  function openSignup(plan) {
-    if (plan && PLAN[plan]) {
-      $("#s-paq").value = plan;
-      $("#sheet-sub").textContent = "Plan " + PLAN[plan] + " · 14 días gratis, sin tarjeta.";
-    }
-    $("#sheet-form").hidden = false;
-    $("#sheet-success").hidden = true;
-    overlay.hidden = false;
-    document.body.style.overflow = "hidden";
-    setTimeout(function () { $("#s-nom").focus(); }, 50);
-  }
-  function closeSignup() {
-    if (!canMorph() || !lastSource || overlay.hidden) {
-      overlay.hidden = true; document.body.style.overflow = ""; return;
-    }
-    var src = lastSource;
-    sheetEl.style.viewTransitionName = "plan-morph";
-    var vt = document.startViewTransition(function () {
-      sheetEl.style.viewTransitionName = "";
-      overlay.hidden = true;
-      document.body.style.overflow = "";
-      src.style.viewTransitionName = "plan-morph";
-    });
-    vt.finished.then(cleanup, cleanup);
-    function cleanup() { src.style.viewTransitionName = ""; }
-  }
-
   document.addEventListener("click", function (e) {
-    var t = e.target.closest("[data-signup],[data-cycle],#close-x,#close-ok,.more-toggle");
-    if (!t) {
-      if (e.target === overlay) closeSignup();
-      return;
-    }
+    var t = e.target.closest("[data-cycle],.more-toggle");
+    if (!t) return;
     if (t.classList.contains("more-toggle")) {
       var planCard = t.closest(".plan");
       var open = planCard.classList.toggle("open");
@@ -726,20 +614,7 @@
       t.firstChild.nodeValue = open ? "Ver menos " : "Ver todo lo que incluye ";
       return;
     }
-    if (t.hasAttribute("data-signup")) { openWithTransition(t.closest(".plan") || t, t.getAttribute("data-signup")); return; }
-    if (t.hasAttribute("data-cycle")) { setCycle(t.getAttribute("data-cycle")); return; }
-    if (t.id === "close-x" || t.id === "close-ok") { closeSignup(); return; }
-  });
-  document.addEventListener("keydown", function (e) { if (e.key === "Escape" && !overlay.hidden) closeSignup(); });
-
-  $("#form-signup").addEventListener("submit", function (e) {
-    e.preventDefault();
-    var nom = $("#s-nom").value.trim();
-    var plan = PLAN[$("#s-paq").value] || "Esencial";
-    $("#success-msg").textContent = "Creamos la cuenta de " + nom + " en el plan " + plan + ". Te enviamos por WhatsApp el enlace para entrar a Pendi y empezar tus 14 días de prueba.";
-    $("#sheet-form").hidden = true;
-    $("#sheet-success").hidden = false;
-    $("#sheet-success").scrollTop = 0;
+    if (t.hasAttribute("data-cycle")) { setCycle(t.getAttribute("data-cycle")); }
   });
 })();
 </script>
